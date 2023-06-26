@@ -69,6 +69,7 @@ Esta red se encarga de codificar aún más las características espacio-temporal
 Este módulo tiene en cuenta tanto los cambios en el tiempo como en el espacio, lo que permite un mejor seguiiento de la evolución de las actividades y una fusión efectiva de características. 
 El artículo también menciona el uso de Grad-CAM (Gradiente de Mapping de Activación Clase) para generar un mapa de ubicación aproximado que resalta las áreas importantes en la imagen para la predicción. Además, se utiliza una convolución separable en profundidad para reducir el número de parámetros en la transición de entrada a estado de la red LSTM.[1]
 
+![image](https://github.com/cristhiansito123/mai_hand/assets/49196938/72c08f64-d8e1-41d8-8442-cf4aba6f31df)
 
 
 
