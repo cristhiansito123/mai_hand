@@ -373,6 +373,7 @@ En el análisis de los resultados, se destaca la importancia de compartir tanto 
 
 ## 9.Referencias
 
+American Sign Language Dataset - https://www.kaggle.com/datasets/ayuraj/asl-dataset Biblioteca MediaPipe - https://developers.google.com/mediapipe Biblioteca Transformers - https://huggingface.co/docs/transformers/main/es/index
 
 ## 10.Agradecimientos
 
