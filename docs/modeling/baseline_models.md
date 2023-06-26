@@ -50,6 +50,4 @@ Con un análisis y una iteración adecuados, se espera que el rendimiento del mo
 
 ## Referencias
 
-Lista de referencias utilizadas para construir el modelo baseline y evaluar su rendimiento.
 
-Espero que te sea útil esta plantilla. Recuerda que puedes adaptarla a las necesidades específicas de tu proyecto.
