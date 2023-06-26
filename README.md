@@ -1,6 +1,12 @@
 ## mai_hand
 <h1 align="center">  Informe del Proyecto de Reconocimiento de Lenguaje de Señas </h1>
 
+## Equipo del Proyecto
+
+- Jhon Nelson Cáceres Leal
+- Cristian David Sandoval Diaz
+- Yuli Fernanda Alpala Cuaspa
+
 ## Índice
 
 * [1. Resumen](#1resumen)
