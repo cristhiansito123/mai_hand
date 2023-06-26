@@ -25,7 +25,9 @@
 
 * [8.Conclusiones](#8conclusiones)
 
-* [9.Agradecimientos](#9agradecimientos)
+* [9.Referencias](#9referencias)
+  
+* [10.Agradecimientos](#10agradecimientos)
 
 
 ##  1.Resumen
@@ -369,8 +371,10 @@ El modelo desarrollado ha demostrado ser capaz de reconocer y traducir correctam
 
 En el análisis de los resultados, se destaca la importancia de compartir tanto los logros como las dificultades encontradas durante el proyecto. Esto contribuye a un aprendizaje continuo y a la identificación de áreas de mejora para futuros proyectos en el campo del reconocimiento de lenguaje de señas.
 
+## 9.Referencias
 
-##  9.Agradecimientos
+
+## 10.Agradecimientos
 
 
 En primer lugar, agradecemos al equipo de trabajo por su dedicación y esfuerzo en el desarrollo del modelo y la implementación de las técnicas de reconocimiento de imágenes y procesamiento de lenguaje natural. Su compromiso y conocimiento han sido fundamentales para alcanzar los resultados obtenidos.
