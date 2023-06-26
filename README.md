@@ -71,7 +71,7 @@ El artículo también menciona el uso de Grad-CAM (Gradiente de Mapping de Activ
 
 ![image](https://github.com/cristhiansito123/mai_hand/assets/49196938/72c08f64-d8e1-41d8-8442-cf4aba6f31df)
 
-
+Figura 1. Atención espacial obtenida después del entrenamiento, la red identifica correctamente los objetos.[1]
 
 
 
