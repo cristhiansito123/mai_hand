@@ -67,7 +67,7 @@ El método consta de dos etapas principales. En la primera etapa, se agrega un m
 En la segunda etapa, las caracteristicas extraídas se utilizan como entrada para una red neuronal de tipo Long-Short Term MEmory (LSTM) bidireccional de dos vias.
 Esta red se encarga de codificar aún más las características espacio-temporales de los gestos de lenguaje de señas. Se utiliza una variante del módulo ConvLSTM que fusiona las características en las dimensiones espacial y temporal. 
 Este módulo tiene en cuenta tanto los cambios en el tiempo como en el espacio, lo que permite un mejor seguiiento de la evolución de las actividades y una fusión efectiva de características. 
-El artículo también menciona el uso de Grad-CAM ()
+El artículo también menciona el uso de Grad-CAM (Gradiente de Mapping de Activación Clase) para generar un mapa de ubicación aproximado que resalta las áreas importantes en la imagen para la predicción. Además, se utiliza una convolución separable en profundidad para reducir el número de parámetros en la transición de entrada a estado de la red LSTM.
 
 
 
