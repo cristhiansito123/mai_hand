@@ -53,7 +53,6 @@ El reconocimiento de lenguaje de señas ha sido objeto de investigación y desar
 
 En la literatura científica, se han propuesto diversas técnicas y enfoques para el reconocimiento de lenguaje de señas. Entre ellos, destacan los enfoques basados en el uso de cámaras y sensores para capturar y analizar los movimientos y gestos de las manos, así como las expresiones faciales asociadas al lenguaje de señas.
 
-
 Algunos de los modelos de aprendizaje profundo más populares para el reconocimiento de lenguaje de señas incluyen:
 
 * Redes neuronales convolucionales (CNN)
@@ -61,6 +60,19 @@ Algunos de los modelos de aprendizaje profundo más populares para el reconocimi
 * Redes neuronales recurrentes (RNN)
 
 * Redes de memoria a largo plazo (LSTM)
+
+A continuación, se presentan algunos articulos relevantes que exploran el estado del arte de la inteligencia artificial aplicada al lenguaje de señas.
+"Gesture recognition for sign language Video Stream Translation", los autores proponen un método de reconocimiento de gestos basado en el mecanismo de atención y la fusión de características. El objetivo del método es abordar el problema del reconocimiento de gestos en la traducción de transmisiones de video en lenguaje de señas. 
+El método consta de dos etapas principales. En la primera etapa, se agrega un mecanismo de atención a un marco preentrenado de redes neuronales convolucionales (CNN) para reconocimiento de imágenes generales. Este mecanismo de atención utiliza gráficos de activación de clase para resaltar las áreas espaciales relevantes en las imágenes. Se utilizan gradientes promediados a través de agrupación global promedio para una localización más prescisa. Luego, se seleccionan características específicas de una capa de convolución mediante el peso de importancia de las neuronas obtenido del mecanismo de atención. 
+En la segunda etapa, las caracteristicas extraídas se utilizan como entrada para una red neuronal de tipo Long-Short Term MEmory (LSTM) bidireccional de dos vias.
+Esta red se encarga de codificar aún más las características espacio-temporales de los gestos de lenguaje de señas. Se utiliza una variante del módulo ConvLSTM que fusiona las características en las dimensiones espacial y temporal. 
+Este módulo tiene en cuenta tanto los cambios en el tiempo como en el espacio, lo que permite un mejor seguiiento de la evolución de las actividades y una fusión efectiva de características. 
+El artículo también menciona el uso de Grad-CAM ()
+
+
+
+
+
 
 
 A pesar del progreso que se ha logrado en el reconocimiento de lenguaje de señas, todavía hay una serie de desafíos que deben abordarse. Estos desafíos incluyen:
