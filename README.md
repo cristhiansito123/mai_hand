@@ -79,9 +79,9 @@ La metodologia usada se basa en el aprendizaje de mapeo entre secuencias utiliza
 El documento también presenta experimentos cualitativos y cuantitativos para evaluar el enfoque propuesto. Se comparten ejemplos de traducciones generadas por las redes entrenadas y se comparan con las traducciones reales en alemán e inglés. Los resultados muestran que el enfoque propuesto, especialmente el sistema S2G2T, supera significativamente el rendimiento de otros enfoques y demuestra la importancia de la supervisión de nivel de glosas expertas para simplificar el proceso de entrenamiento.[2]
 
 ![image](https://github.com/cristhiansito123/mai_hand/assets/49196938/36db262f-433a-46f2-8b2c-6258083841d7)
+
+
 Figura 2. Descripción general del SLT (Traducción del lenguaje de señas) que genera traducciones de lenguaje hablado de videos de lenguaje de señas.[2] 
-
-
 
 A pesar del progreso que se ha logrado en el reconocimiento de lenguaje de señas, todavía hay una serie de desafíos que deben abordarse. Estos desafíos incluyen:
 
