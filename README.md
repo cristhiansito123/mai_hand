@@ -61,6 +61,8 @@ Algunos de los modelos de aprendizaje profundo más populares para el reconocimi
 
 * Redes de memoria a largo plazo (LSTM)
 
+* Clasificador de Bosque aleatorio (RFC)
+
 A continuación, se presentan algunos articulos relevantes que exploran el estado del arte de la inteligencia artificial aplicada al lenguaje de señas.
 "Gesture recognition for sign language Video Stream Translation", los autores proponen un método de reconocimiento de gestos basado en el mecanismo de atención y la fusión de características. El objetivo del método es abordar el problema del reconocimiento de gestos en la traducción de transmisiones de video en lenguaje de señas. 
 El método consta de dos etapas principales. En la primera etapa, se agrega un mecanismo de atención a un marco preentrenado de redes neuronales convolucionales (CNN) para reconocimiento de imágenes generales. Este mecanismo de atención utiliza gráficos de activación de clase para resaltar las áreas espaciales relevantes en las imágenes. Se utilizan gradientes promediados a través de agrupación global promedio para una localización más prescisa. Luego, se seleccionan características específicas de una capa de convolución mediante el peso de importancia de las neuronas obtenido del mecanismo de atención. 
@@ -308,6 +310,61 @@ cv2_imshow(imagen_recortada2)
 
 ![image](https://github.com/cristhiansito123/mai_hand/assets/38961990/5116b281-5c24-493d-bd39-e6f433332d43)
 
+### 6.5  Generación de los puntos de la base de datos
+
+En esta sección se generaron los puntos de la base de datos a entrenar, por lo que se convirtieron en un vector de 21 puntos con 3 coordenadas x, y y z. Para dar un total de 63 puntos, estos se almacenaron en un .csv que se llamará como muestra de entrenamiento. Esto lo hace el siguiente código:
+
+````
+mp_drawing = mp.solutions.drawing_utils
+mp_hands = mp.solutions.hands
+mp_drawing_styles = mp.solutions.drawing_styles
+csv_path = 'landmarks.csv'  # Ruta del archivo CSV
+counter =0
+
+with open(csv_path, 'w', newline='') as csv_file1:
+    writer1 = csv.writer(csv_file1)
+    for i in range(len(data)):
+      with mp_hands.Hands(static_image_mode=True, max_num_hands=1, min_detection_confidence=0.5) as hands:
+            # Convertir la imagen de BGR a RGB
+
+            image_rgb = cv2.cvtColor(np.array(data[i][0]), cv2.COLOR_BGR2RGB)
+
+            blurred_image = cv2.GaussianBlur(image_rgb, (5, 5), 0)
+
+            # Filtrado para priorizar la mano
+            imagen_recortada2 = cv2.resize(np.array(data[i][0]), (320, 240))
+
+            # Procesar la imagen con Mediapipe9
+            #resultado = hands.process(np.array(data[i][0]))
+            resultado = hands.process(imagen_recortada2)
+            # Verificar si se detectó alguna mano
+
+            #cv2_imshow(imagen_recortada2)
+
+                # Guardar los puntos y vectores en un archivo CSV
+      if resultado.multi_hand_landmarks:
+
+                    hand_landmarks_cropped = resultado.multi_hand_landmarks[0]
+                    landmarks_data = []
+                    for landmark in hand_landmarks_cropped.landmark:
+                        landmarks_data.append((landmark.x, landmark.y, landmark.z))
+
+
+                    writer1.writerows(str(data[i][1]))
+                    writer1.writerows(landmarks_data)
+
+
+
+
+                    #print(landmarks_data)
+                    if(i==300):
+
+                      mp_drawing.draw_landmarks(
+                                    imagen_recortada2, hand_landmarks_cropped, mp_hands.HAND_CONNECTIONS,mp_drawing_styles.get_default_hand_landmarks_style(),mp_drawing_styles.get_default_hand_connections_style()
+                                )
+                      cv2_imshow(imagen_recortada2)
+````
+![image](images/vector.png)
 
 ### 6.7  Guardado de los puntos y vectores en un archivo CSV
 
