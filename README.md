@@ -1,4 +1,4 @@
-## Mai_hand
+## MAI HAND
 <h1 align="center">  Informe del Proyecto de Reconocimiento de Lenguaje de Señas </h1>
 
 ## Equipo del Proyecto
@@ -149,7 +149,11 @@ El proyecto de reconocimiento de lenguaje de señas tiene diversas aplicaciones 
 
 ##  6.Metodología
 
-El código se divide en varias secciones, cada una de las cuales cumple una función específica. A continuación, se describen brevemente las secciones principales del código:
+En este trabajo se utilizó una metodología recursiva, tal que nos permita implementar soluciones recurrentemente y volver a etapas iniciales de ser necesario. De esta manera queremos obtener de manera iterativa el mejor modelo con una implementación satisfactoria:
+
+![image](images/metodologia.png)
+
+Ahora se va a explicar cada una de las implementaciones que hicieron parte de esta metodología de trabajo:
 
 ### 6.1  Importación de la base de datos
 
