@@ -383,6 +383,7 @@ with open(csv_path, 'w', newline='') as csv_file1:
                       cv2_imshow(imagen_recortada2)
 ````
 ![image](images/vector.png)
+![image](https://github.com/cristhiansito123/mai_hand/assets/38961990/b3123a2b-ce07-45ca-b998-0739c1986364)
 
 ### 6.6  Entrenamiento del modelo de traducción
 
