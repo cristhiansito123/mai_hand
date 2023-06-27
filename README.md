@@ -151,20 +151,34 @@ El proyecto de reconocimiento de lenguaje de señas tiene diversas aplicaciones 
 
 El código se divide en varias secciones, cada una de las cuales cumple una función específica. A continuación, se describen brevemente las secciones principales del código:
 
-### 6.1  Importación de biblioteca
+### 6.1  Importación de la base de datos
 
-El código comienza importando las bibliotecas necesarias para el procesamiento de imágenes, como OpenCV, Mediapipe, CSV y Google Colab.
+Como parte de la metodología, se inicia importando la base de datos de kaggle del siguiente [enlace](https://www.kaggle.com/datasets/ayuraj/asl-dataset) a un notebook, en este caso se guardó la base de datos en el drive para posteriormente usarla cada vez que queramos usar el notebook, de esta manera:
+
 ````
 # import dependencies
-from IPython.display import display, Javascript, Image
-from google.colab.output import eval_js
-from base64 import b64decode, b64encode
-import cv2
-import numpy as np
-import PIL
-import io
-import html
-import time
+from google.colab import drive
+drive.mount('/content/drive', force_remount=True)
+train_path = '/content/drive/MyDrive/signal_language/asl_dataset' ##Ubicación del dataset en el drive personal
+data = []
+for i in range(10): ##Se llaman primero los números del 0 al 9
+  images_folder = train_path+'/'+str(i)+'/'
+  image_files = os.listdir(images_folder)
+
+  for image_file in image_files:
+      if image_file.endswith('.jpeg'):
+          image_path = os.path.join(images_folder, image_file)
+          image = Image.open(image_path)
+          data.append((image, i))
+for i in range(ord('a'), ord('z')+1): ##Se llama ahora las letras de la a a la z
+  images_folder = train_path+'/'+chr(i)+'/'
+  image_files = os.listdir(images_folder)
+
+  for image_file in image_files:
+      if image_file.endswith('.jpeg'):
+          image_path = os.path.join(images_folder, image_file)
+          image = Image.open(image_path)
+          data.append((image, chr(i)))
 ````
 ###  6.2  Carga y visualización de la imagen
 
