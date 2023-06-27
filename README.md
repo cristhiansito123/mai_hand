@@ -73,8 +73,13 @@ El artículo también menciona el uso de Grad-CAM (Gradiente de Mapping de Activ
 
 Figura 1. Atención espacial obtenida después del entrenamiento, la red identifica correctamente los objetos.[1]
 
+"Neural Sign Language Translation", en este artículo se presenta un enfoque novedoso para la traducción de lenguaje de señas mediante el uso de redes neuronales y atención basada en codificador-decodificador. La idea principal es abordar el desafio de la traducción de lenguaje de señas de manera integral, tratando el lenguaje de señas como un idioma independiente y proponiendo la traducción en lugar del reconocimiento como una ruta para facilitar la comunicación con personas sordas. 
+La metodologia usada se basa en el aprendizaje de mapeo entre secuencias utilizando redes neuronales codificador-decodificador. Se emplea un enfoque de tokenización para representar los videos de lenguaje de señas y se utilizan redes neuronales convolucionales (CNN) para generar incrustaciones espaciales. Además, se emplea el enfoque de atención para alinear y reconocer los signos en los videos de lenguaje de señas, y luego traducirlos al texto hablado. 
 
+El documento también presenta experimentos cualitativos y cuantitativos para evaluar el enfoque propuesto. Se comparten ejemplos de traducciones generadas por las redes entrenadas y se comparan con las traducciones reales en alemán e inglés. Los resultados muestran que el enfoque propuesto, especialmente el sistema S2G2T, supera significativamente el rendimiento de otros enfoques y demuestra la importancia de la supervisión de nivel de glosas expertas para simplificar el proceso de entrenamiento.[2]
 
+![image](https://github.com/cristhiansito123/mai_hand/assets/49196938/36db262f-433a-46f2-8b2c-6258083841d7)
+Figura 2. Descripción general del SLT (Traducción del lenguaje de señas) que genera traducciones de lenguaje hablado de videos de lenguaje de señas.[2] 
 
 
 
@@ -392,8 +397,9 @@ American Sign Language Dataset - https://www.kaggle.com/datasets/ayuraj/asl-data
 
 [1] B. Fei, H. Jiwei, J. Xuemei and L. Ping, "Gesture recognition for sign language Video Stream Translation," in 2020 5th International Conference on Mechanical, Control and Computer Engineering (ICMCCE), Harbin, China, 2020 pp. 1315-1319.
 doi: 10.1109/ICMCCE51767.2020.00288
-[2]
-
+[2] N. Camgoz, S. Hadfield, O. Koller, H. Ney and R. Bowden, "Neural Sign Language Translation," in 2018 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), Salt Lake City, UT, USA, 2018 pp. 7784-7793.
+doi: 10.1109/CVPR.2018.00812
+[3] 
 
 ## 10.Agradecimientos
 
