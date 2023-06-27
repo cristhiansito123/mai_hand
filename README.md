@@ -85,14 +85,12 @@ Figura 2. Descripción general del SLT (Traducción del lenguaje de señas) que 
 
 A pesar del progreso que se ha logrado en el reconocimiento de lenguaje de señas, todavía hay una serie de desafíos que deben abordarse. Estos desafíos incluyen:
 
-La variabilidad de los gestos de la lengua de signos. Los gestos del lenguaje de señas pueden variar.
+La variabilidad de los gestos de la lengua de signos.
+Los gestos del lenguaje de señas pueden variar.
+El ruido de fondo el cual puede dificultar el reconocimiento de los gestos del lenguaje de señas. 
+La pequeña cantidad de datos de entrenamiento, esto puede dificultar el entrenamiento de los modelos precisos. 
 
-El ruido de fondo. El ruido de fondo puede dificultar el reconocimiento de los gestos del lenguaje de señas.
-
-La pequeña cantidad de datos de entrenamiento. Hay una cantidad limitada de datos de entrenamiento disponibles para el reconocimiento de lenguaje de señas, lo que puede dificultar el entrenamiento de modelos precisos.
-
-Pdemos encontrar algunos proyectos, aplicaciones, entre otras que ya estan en desarrollo  para el reconocimiento de lenguaje de señas:
-
+Podemos encontrar algunos proyectos, aplicaciones, entre otras que ya estan en desarrollo  para el reconocimiento de lenguaje de señas:
 
 * Microsoft's Seeing: es una aplicación que utiliza la visión artificial para ayudar a las personas ciegas y con problemas de visión a ver el mundo que les rodea. Puede reconocer objetos, leer texto y traducir lenguaje de señas.
   
