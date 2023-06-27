@@ -397,9 +397,11 @@ American Sign Language Dataset - https://www.kaggle.com/datasets/ayuraj/asl-data
 
 [1] B. Fei, H. Jiwei, J. Xuemei and L. Ping, "Gesture recognition for sign language Video Stream Translation," in 2020 5th International Conference on Mechanical, Control and Computer Engineering (ICMCCE), Harbin, China, 2020 pp. 1315-1319.
 doi: 10.1109/ICMCCE51767.2020.00288
+
+
 [2] N. Camgoz, S. Hadfield, O. Koller, H. Ney and R. Bowden, "Neural Sign Language Translation," in 2018 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), Salt Lake City, UT, USA, 2018 pp. 7784-7793.
 doi: 10.1109/CVPR.2018.00812
-[3] 
+
 
 ## 10.Agradecimientos
 
