@@ -1,4 +1,4 @@
-## mai_hand
+## Mai_hand
 <h1 align="center">  Informe del Proyecto de Reconocimiento de Lenguaje de Señas </h1>
 
 ## Equipo del Proyecto
@@ -366,52 +366,21 @@ with open(csv_path, 'w', newline='') as csv_file1:
 ````
 ![image](images/vector.png)
 
-### 6.7  Guardado de los puntos y vectores en un archivo CSV
+### 6.6  Entrenamiento del modelo de traducción
 
-Si se detecta una mano, se guardan los puntos y vectores correspondientes a los landmarks de la mano en un archivo CSV. Estos datos pueden ser utilizados posteriormente para entrenar modelos de aprendizaje automático.
-
-````
-import cv2
-import mediapipe as mp
-import csv
-from google.colab.patches import cv2_imshow
-import matplotlib.pyplot as plt
-
-  # Leer los vectores del archivo CSV
-
-vectores = []
-with open('landmarks.csv' , 'r') as csvfile:
-      reader = csv.reader(csvfile)
-      for row in reader:
-          x, y, *_ = map(float, row)
-          vectores.append((x, y))
-
-  # Crear una figura y un eje
-fig, ax = plt.subplots()
-
-  # Obtener las coordenadas x e y por separado
-coordenadas_x = [vector[0] for vector in vectores]
-coordenadas_y = [vector[1] for vector in vectores]
-
-  # Dibujar los puntos en el gráfico
-ax.plot(coordenadas_x, coordenadas_y, 'ro')
-
-  # Configurar los límites del gráfico
-min_x, max_x = min(coordenadas_x), max(coordenadas_x)
-min_y, max_y = min(coordenadas_y), max(coordenadas_y)
-ax.set_xlim(min_x, max_x)
-ax.set_ylim(min_y, max_y)
-
-  # Mostrar el gráfico
-if __name__ == "__main__":
-    plt.show()
+A pesar que creamos modelos de redes neuronales convolucionales, al final se decantó por un clasificador de árbol aleatorio. Esto se debe a que se obtuvieron las mejores métricas de desempeño para este primer trabajo, pero se espera que para más datos este modelo se quede corto y se necesite usar redes neuronales. Este se implementó 
 
 ````
-### 6.9  Visualización de los vectores en un gráfico
+model = RandomForestClassifier()
 
-En esta sección adicional del código, se leen los vectores guardados en el archivo CSV y se representan gráficamente en un gráfico utilizando la biblioteca Matplotlib.
+model.fit(x_train, y_train)
 
-![image](https://github.com/cristhiansito123/mai_hand/assets/38961990/42c90d42-e0f1-49d2-9a79-b4df3d598d71)
+y_predict = model.predict(x_test)
+````
+
+### 6.7  Guardado del modelo para su despligue en Visual Studio
+
+Se guardó el modelo en el drive para su posterior uso en Visual Studio, de esta manera podemos cambiar los datos y generar bastantes modelos de prueba.
 
 ##  7.Resultados y Análisis
 
@@ -420,6 +389,16 @@ En esta sección adicional del código, se leen los vectores guardados en el arc
 El modelo final desarrollado utilizando la metodología descrita anteriormente ha logrado una precisión del 94.94% en la clasificación de las señas del lenguaje de señas. Esto significa que el modelo ha sido capaz de reconocer correctamente el 94.94% de las señas realizadas por los usuarios.
 El recall del modelo ha sido del 95.09%, lo que indica la capacidad del modelo para encontrar todas las instancias relevantes de las señas.
 El F1 score del modelo ha sido del 95.02%, una medida ponderada que combina la precisión y el recall del modelo. Este valor refleja el rendimiento general del modelo en la clasificación del lenguaje de señas.
+
+También se obtuvo una matriz de desempeño por cada característica, en la cual podemos observar cuales señas tienen mejor clasificación que las otras:
+
+![image](images/matriz.png)
+
+Por otro lado, la implementación en visual studio nos dejó satisfechos con los alcances esperados del proyecto, ya que tenemos un nivel cómodo de traducción y bastante cómodo para el usuario:
+
+![image](images/a.png)
+![image](images/b.png)
+![image](images/6.png)
 
 2. Análisis de los resultados:
 
