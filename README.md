@@ -5,7 +5,6 @@
 
 - Jhon Nelson Cáceres Leal
 - Cristian David Sandoval Diaz
-- Yuli Fernanda Alpala Cuaspa
 
 ## Índice
 
